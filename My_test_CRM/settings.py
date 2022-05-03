@@ -87,8 +87,12 @@ WSGI_APPLICATION = 'My_test_CRM.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dd8o2aafbafo2c',
+        'HOST': 'ec2-52-71-69-66.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'USER': 'dqprcjrqtdzxib',
+        'PASSWORD': '89768d43954337560c8b37d42e1ae863442ad9aa69b6fdfce67c43690efd27c0'
     }
 }
 
