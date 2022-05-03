@@ -20,7 +20,7 @@ DEBUG = env('DEBUG')
 
 # Raises Django's ImproperlyConfigured
 # exception if SECRET_KEY not in os.environ
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY ='django-insecure-haoc9c*q6f6^zjm(_7%lm!u&ba$wh0lwbaz&bmi%b2grpz#ke7'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 ALLOWED_HOSTS = ['mytestcrm.herokuapp.com', '127.0.0.1:8000']
@@ -126,6 +126,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
@@ -133,7 +134,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 AUTH_USER_MODEL = 'leads.User'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
