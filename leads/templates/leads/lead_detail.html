@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <a href="{% url 'leads:lead' %}">Go back to leads</a>
+
+    <div class="card" >
+      <img src="#" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">This is lead detail of {{ lead.first_name }}</h5>
+        <p class="card-text">Phone number: {{ lead.phone_number }}</p>
+        <p class="card-text">Description: {{ lead.description }}</p>
+        <p class="card-text">The agen responsible for this lead is: {{ lead.agent }}</p>
+        <a href="{% url 'leads:lead-update' lead.pk %}" class="btn btn-primary">Update lead</a>
+        <a href="{% url 'leads:lead-delete' lead.pk %}" class="btn btn-danger">Delete lead</a>
+        <a href="{% url 'leads:lead-category-update' lead.pk %}" class="btn btn-success">Category</a>
+      </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ category.name }}</h2>
+    <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">First name</th>
+              <th scope="col">Last name</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for lead in category.leads.all %}
+                <tr>
+                  <td>
+                      <a href="{% url 'leads:lead-detail' lead.pk %}">{{ lead.first_name}}</a>
+                  </td>
+
+                  <td>{{ leas.last_name }}</td>
+                </tr>
+              {% endfor %}
+          </tbody>
+    </table>
+
+{% endblock content %}

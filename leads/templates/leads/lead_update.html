@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+    <a href="{% url 'leads:lead-detail' lead.pk %}" class="link-success">Go back to {{ lead.first_name }} {{ lead.last_name }}</a>
+    <hr/>
+    <div class="container-fluid">
+        <h2> Update lead: {{ lead.first_name }} {{ lead.last_name }}</h2>
+            <form class="row" method = "post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button  type="submit">Submit</button>
+            </form>
+    </div>
+{% endblock content %}

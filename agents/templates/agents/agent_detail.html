@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="{% url 'agents:agent-list' %}">Go back to agents</a>
+    <h1>This is agent detail of {{ agent.user.username }}</h1>
+        <ul>
+            <li>This is person age: {{ lead.age }}</li>
+        </ul>
+        <p>The agen responsible for this lead is: {{ agent.user.username }}</p>
+        <hr />
+        <a href="{% url 'agents:agent-update' agent.pk %}">Update lead</a>
+        <a href="{% url 'agents:agent-delete' agent.pk %}">Delete lead</a>
+{% endblock content %}
