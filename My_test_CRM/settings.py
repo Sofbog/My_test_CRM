@@ -1,12 +1,14 @@
 from pathlib import Path
 import environ
 import os
+import django_heroku
 
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
 
+django_heroku.settings(locals())
 # Set the project base directory
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
