@@ -8,7 +8,7 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-django_heroku.settings(locals())
+
 # Set the project base directory
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -149,3 +149,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+django_heroku.settings(locals())
