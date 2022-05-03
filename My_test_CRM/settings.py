@@ -21,7 +21,7 @@ DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mytestcrm.herokuapp.com', '127.0.0.1:8000']
 
 
 # Application definition
