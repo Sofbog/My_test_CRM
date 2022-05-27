@@ -1,1 +1,0 @@
-web: gunicorn My_test_CRM.wsgi --log-file -
