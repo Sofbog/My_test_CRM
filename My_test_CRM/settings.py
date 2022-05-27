@@ -1,7 +1,7 @@
 from pathlib import Path
 import environ
 import os
-import django_heroku
+#import django_heroku
 
 env = environ.Env(
     # set casting, default value
@@ -20,16 +20,15 @@ DEBUG = env('DEBUG')
 
 # Raises Django's ImproperlyConfigured
 # exception if SECRET_KEY not in os.environ
-SECRET_KEY ='django-insecure-haoc9c*q6f6^zjm(_7%lm!u&ba$wh0lwbaz&bmi%b2grpz#ke7'
+SECRET_KEY = 'SECRET_KEY'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ALLOWED_HOSTS = ['mytestcrm.herokuapp.com', '127.0.0.1:8000']
+ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    "whitenoise.runserver_nostatic",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -156,4 +155,4 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
